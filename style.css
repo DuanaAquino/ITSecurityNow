@@ -182,8 +182,11 @@ a{
     z-index: 2;
 }
 .banner-buttons{
-    margin: -2rem 0 4rem 0; 
+    margin: 1rem 0 4rem 0; 
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #schedule-button{
     background-color: var(--button);
@@ -193,7 +196,9 @@ a{
     font-size: 1rem;
     font-weight: 600;
     padding: .8rem 2.5rem;
-    margin: 0 2rem;
+    margin: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
 }
 #schedule-button:hover{
     background-color: var(--button-hover);
@@ -248,7 +253,8 @@ span{
     color: #FFFFFF;
     background-color: rgba(238, 238, 238, 0.1);
     backdrop-filter: blur(.2rem);
-    padding: .8rem 3rem;
+    padding: .9rem 3rem;
+    margin-top: 0rem;
 }
 .secondary-button:hover{
     cursor: pointer;
