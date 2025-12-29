@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>IT Security Now</title>
 </head>
+
 <body>
     <header>
-        <img src="" alt="">
+        <div id="logo">
+            <img src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png" width="350"
+                alt="ITSN LOGO">
+        </div>
         <nav>
             <ul>
                 <li><a href="">About Us</a></li>
@@ -18,27 +24,510 @@
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
-        <button>
-            Get Started
-        </button>
+        <div id="nav-buttons">
+            <button class="mode-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg></button>
+            <button class="primary-button">
+                Get Started
+            </button>
+        </div>
     </header>
     <section id="banner">
-        <p>Trusted Healthcare IT Partner</p>
-        <h1>Secure IT Solutions for
-        Healthcare Excellence</h1>
-        <h3>Partnering with healthcare organizations to maximize and streamline secure IT solutions. Your trusted partner for Secure AI, Cloud, IT, and Compliance.</h3>
-        <button>Schedule Consultation</button>
-        <button>Learn More</button>
+        <p class="banner-content credential"> <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-shield-icon lucide-shield">
+                <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+            </svg>Trusted Healthcare IT Partner</p>
+        <h1 class="banner-content" id="main-title">Secure IT Solutions for <br>
+            <span>Healthcare Excellence</span>
+        </h1>
+        <h3 class="banner-content">Partnering with healthcare organizations to maximize and streamline secure IT
+            solutions. Your trusted partner for Secure AI, Cloud, IT, and Compliance.</h3>
+        <div class="banner-buttons">
+            <button class="banner-content" id="schedule-button">Schedule Consultation <svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-right-icon lucide-arrow-right">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                </svg></button>
+            <button class="banner-content secondary-button">Learn More</button>
+        </div>
+        <!-- WAVE -->
+        <svg class="banner-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,64 C240,120 480,120 720,96 960,72 1200,72 1440,96 L1440,120 L0,120 Z" fill="#ffffff" />
+        </svg>
     </section>
     <main>
-        <section id="about">
+        <section class="text-container" id="about">
             <h2>About IT Security Now</h2>
-            <p>At IT Security Now, we partner with healthcare companies to maximize their IT and cybersecurity capabilities. Our mission is to streamline processes and enhance security measures, ensuring that our clients can focus on delivering exceptional healthcare services.
-            As a vendor-agnostic value-added reseller, we procure the best solutions tailored to meet the unique needs of each organization. Together, we create a secure and efficient technological environment for the healthcare industry.</p>
-            <div class="cards-container">
-                
+            <p>At IT Security Now, we partner with healthcare companies to maximize their IT and cybersecurity
+                capabilities. Our mission is to streamline processes and enhance security measures, ensuring that our
+                clients can focus on delivering exceptional healthcare services.</p> <br>
+            <p>As a vendor-agnostic value-added reseller, we procure the best solutions tailored to meet the unique
+                needs of each organization. Together, we create a secure and efficient technological environment for the
+                healthcare industry.</p>
+        </section>
+        <section class="cards-container">
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield">
+                        <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    </svg>
+                </div>
+                <h5>Security First</h5>
+                <p>We prioritize the protection of your healthcare data with industry-leading security measures and
+                    protocols.</p>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>
+                </div>
+                <h5>Partnership Approach</h5>
+                <p>We work alongside your team as true partners, understanding your unique challenges and goals.</p>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-award-icon lucide-award">
+                        <path
+                            d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                        <circle cx="12" cy="8" r="6" />
+                    </svg>
+                </div>
+                <h5>Excellence & Expertise</h5>
+                <p>Our team brings decades of combined experience in healthcare IT and cybersecurity solutions.</p>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-target-icon lucide-target">
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="6" />
+                        <circle cx="12" cy="12" r="2" />
+                    </svg>
+                </div>
+                <h5>Results Driven</h5>
+                <p>We focus on delivering measurable outcomes that enhance your IT capabilities and security posture.
+                </p>
             </div>
         </section>
+        <section class="commitment">
+            <h4>Our Commitment</h4>
+            <p>We are committed to being your trusted partner for secure AI, cloud, IT, and compliance solutions. Our
+                vendor-agnostic approach ensures that you receive the best technology solutions for your specific needs,
+                not just what we happen to sell. Your success is our success.</p>
+        </section>
+        <section id="solutions">
+            <div class="text-container">
+                <h2>Comprehensive IT Solutions</h2>
+                <p>Vendor-agnostic services tailored to maximize your healthcare organization's IT capabilities</p>
+            </div>
+            <div class="cards2-container">
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shield-icon lucide-shield">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                    </div>
+                    <h5>Cybersecurity</h5>
+                    <p>Comprehensive security solutions to protect your healthcare data and infrastructure from evolving
+                        threats.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-cloud-icon lucide-cloud">
+                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                        </svg>
+                    </div>
+                    <h5>Cloud Solutions</h5>
+                    <p>Scalable cloud infrastructure designed for healthcare compliance and seamless integration.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-brain-icon lucide-brain">
+                            <path d="M12 18V5" />
+                            <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
+                            <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
+                            <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
+                            <path d="M18 18a4 4 0 0 0 2-7.464" />
+                            <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
+                            <path d="M6 18a4 4 0 0 1-2-7.464" />
+                            <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" />
+                        </svg>
+                    </div>
+                    <h5>AI Integration</h5>
+                    <p>Secure AI solutions to enhance operational efficiency while maintaining data privacy and
+                        compliance.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-file-check-icon lucide-file-check">
+                            <path
+                                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                            <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                            <path d="m9 15 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h5>Compliance Management</h5>
+                    <p>Expert guidance ensuring HIPAA and healthcare regulatory compliance across your IT
+                        infrastructure.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-database-icon lucide-database">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                            <path d="M3 12A9 3 0 0 0 21 12" />
+                        </svg>
+                    </div>
+                    <h5>Data Management</h5>
+                    <p>Robust data solutions for secure storage, backup, and recovery of critical healthcare
+                        information.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon-container-start-alignment">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-icon lucide-lock">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h5>Access Control</h5>
+                    <p>Advanced identity and access management to protect sensitive patient data and systems.</p>
+                </div>
+            </div>
+        </section>
+        <section class="reasons-why">
+            <div id="why">
+                <h2>Why Choose IT Security Now?</h2>
+                <p>We partner with healthcare companies to maximize their IT and cybersecurity capabilities. Our mission
+                    is to streamline processes and enhance security measures, ensuring you can focus on delivering
+                    exceptional healthcare services.</p>
+                <p>As a vendor-agnostic value-added reseller, we procure the best solutions tailored to meet the unique
+                    needs of each organization.</p>
+            </div>
+            <div id="reasons">
+                <ul>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Vendor-Agnostic Approach</h6>
+                            <p>We partner with the best solutions tailored to your unique needs, not limited by vendor
+                                relationships.</p>
+                        </li>
+                    </div>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Healthcare Expertise</h6>
+                            <p>Deep understanding of healthcare IT challenges, compliance requirements, and industry
+                                best practices.</p>
+                        </li>
+                    </div>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Proactive Support</h6>
+                            <p>24/7 monitoring and support to ensure your systems remain secure and operational at all
+                                times.</p>
+                        </li>
+                    </div>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Streamlined Processes</h6>
+                            <p>We simplify complex IT operations, allowing you to focus on delivering exceptional
+                                healthcare services.</p>
+                        </li>
+                    </div>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Scalable Solutions</h6>
+                            <p>Infrastructure that grows with your organization, from small clinics to large healthcare
+                                systems.</p>
+                        </li>
+                    </div>
+                    <div class="list">
+                        <svg class="reasons-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <li>
+                            <h6>Cost Optimization</h6>
+                            <p>Strategic technology investments that maximize value while reducing operational overhead.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <section class="text-container" id="focus">
+            <h2>Healthcare Industry Focus</h2>
+            <p>Specialized IT security solutions designed for every facet of the healthcare industry</p>
+        </section>
+        <section class="cards-container">
+            <div class="card">
+                <div class="blue-icon-container">
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-hospital-icon lucide-hospital">
+                        <path d="M12 7v4" />
+                        <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                        <path d="M14 9h-4" />
+                        <path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" />
+                        <path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" />
+                    </svg>
+                </div>
+                <h5>Hospital Systems</h5>
+                <p>Enterprise-scale IT security and infrastructure for large healthcare networks.</p>
+            </div>
+            <div class="card">
+                <div class="blue-icon-container">
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-stethoscope-icon lucide-stethoscope">
+                        <path d="M11 2v2" />
+                        <path d="M5 2v2" />
+                        <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
+                        <path d="M8 15a6 6 0 0 0 12 0v-3" />
+                        <circle cx="20" cy="10" r="2" />
+                    </svg>
+                </div>
+                <h5>Medical Practices</h5>
+                <p>Tailored solutions for private practices and specialty clinics of all sizes.</p>
+            </div>
+            <div class="card">
+                <div class="blue-icon-container">
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+                        <path
+                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                    </svg>
+                </div>
+                <h5>Long-term Care</h5>
+                <p>Secure systems for nursing homes, assisted living, and rehabilitation facilities.</p>
+            </div>
+            <div class="card">
+                <div class="blue-icon-container">
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2">
+                        <path d="M10 12h4" />
+                        <path d="M10 8h4" />
+                        <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                        <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+                        <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+                    </svg>
+                </div>
+                <h5>Healthcare Organizations</h5>
+                <p>Comprehensive IT support for health insurance providers and administrative entities.
+                </p>
+            </div>
+        </section>
+        <section class="form-title">
+            <div>
+                <h2>Let's Secure Your Future</h2>
+                <p>Ready to enhance your healthcare IT infrastructure? Get in touch with our experts today.</p>
+            </div>
+            <section class="form-container">
+                <form action="/submit-page" method="POST">
+                    <div class="input">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="blank" id="name" name="user_name" required>
+                    </div>
+                    <div class="input">
+                        <label for="mail">E-mail</label>
+                        <input type="e-mail" class="blank" id="mail" name="user_mail">
+                    </div>
+                    <div class="input">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="blank" id="phone-number" name="phone_number" pattern="[0-9]{10,11}"
+                            title="Digite um número de telefone válido (apenas números)">
+                    </div>
+                    <div class="input">
+                        <label for="msg">Message</label>
+                        <textarea id="msg-blank" name="user_message"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+                <aside>
+                    <ul class="contact">
+                        <li>
+                            <div id="mail-icon">
+                                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-mail-icon lucide-mail">
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h6>E-mail Us</h6>
+                                <p>info@itsecuritynow.com <br>
+                                    support@itsecuritynow.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="phone-icon">
+                                <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-phone-icon lucide-phone">
+                                    <path
+                                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h6>Call Us</h6>
+                                <p>+1 (800) 123-4567 <br>
+                                    Mon-Fri 8AM-6PM EST</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="pin-icon">
+                                <svg class="green-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-map-pin-icon lucide-map-pin">
+                                    <path
+                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h6>Visit Us</h6>
+                                <p>123 Healthcare Drive <br>
+                                    Suite 100 <br>
+                                    Medical City, MC 12345</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="partnering">
+                        <h5>Why Partner With Us?</h5>
+                        <ul>
+                            <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Vendor-agnostic solutions</li>
+                            <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Healthcare compliance expertise</li>
+                            <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>24/7 security monitoring</li>
+                            <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Rapid response support</li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
     </main>
+    <footer>
+        <div class="links">
+            <div class="logo-area">
+                <img src="" alt="">
+                <p>Your trusted partner for secure AI, cloud, IT, and compliance solutions in healthcare.</p>
+            </div>
+            <ul class="links-list">
+                <li><a href=""><b>Services</b></a></li>
+                <li><a href="">Cybersecurity</a></li>
+                <li><a href="">Cloud Solutions</a></li>
+                <li><a href="">AI Integration</a></li>
+                <li><a href="">Compliance</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><b>Company</b></a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Industries</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><b>Legal</b></a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">HIPAA Compliance</a></li>
+                <li><a href="">Security</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <div class="copyright-inner">
+                <p>© 2025 IT Security Now. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
