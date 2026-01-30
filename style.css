@@ -9,17 +9,23 @@
     --menu-links: #627084;
     --bg-color: #FFFFFF;
     --header-bg-color: #ffffff80;
+    --credential-bg: #eeeeee1a;
+    --gradient: linear-gradient(to right, #0b3b6ee6, #0b3b6ecc, #115f5cb3);
     --button: #115e59;
+    --button-gradient: linear-gradient(to right, #57e6ff, #20928e);
     --logo-text: #0B3B6E;
     --button-hover: #0D8B5E;
+    --secondary-button-hover: #fefefe4d;
     --border: #eaedf1;
     --cards-fill: #fafbfb;
     --main-text: #727f91;
-    --light-blue: #e4eaf1; 
+    --white-text: #FFFFFF;
+    --title-text: #000407cc;
+    --light-blue: #9be8ff; 
     --testimonials-fill: #f3f7fa;
     --why-background: #f7f7f7;
-    --blue-icon: #23a8c3;
-    --blue-icon-background: #e7f5f8;
+    --blue-icon: #065261;
+    --blue-icon-background: #87bfcab2;
     --green-icon: #115e59;
     --green-icon-background: #6a9696;   
     --purple-icon: #472f5e;
@@ -28,18 +34,25 @@
     --footer-copyright: #b6c5da;
     --footer-border : #3c649d;
     --shadow: #0000002e;
+    --transparent: transparent;
 }
 
 [data-theme="dark"] {
     --menu-links: #64748b;
     --bg-color: #0A1628;
     --header-bg-color: #ffffff80;
-    --button: #3b82f6;
+    --credential-bg: #eeeeee1a;
+    --gradient: linear-gradient(to right, #0b3b6ee6, #0b3b6ecc, #115f5cb3);
+    --button: #479dff;
+    --button-gradient: linear-gradient(to right, #57e6ff, #20928e);
     --logo-text: #FFFFFF;
     --button-hover: #4fb0ff;
+    --secondary-button-hover: #fefefe4d;
     --border: #334155;
-    --cards-fill: #0f172a;
+    --cards-fill: #00202c70;
     --main-text: #94a3b8;
+    --white-text: #FFFFFF;
+    --title-text: #FFFFFF;
     --light-blue: #67e8f9;
     --testimonials-fill: #1e293b;
     --why-background: #043235;
@@ -52,7 +65,8 @@
     --form-background: #050B14;
     --footer-copyright: #b6c5da;
     --footer-border : #b6c5da;
-    --shadow: #0000002e;
+    --shadow: #bebebe2e;
+    --transparent: transparent;
 }
 
 body{
@@ -64,7 +78,7 @@ body{
 
 .primary-button{
     background-color: var(--button);
-    color: var(--bg-color);
+    color: var(--white-text);
     border: 0;
     border-radius: .8rem;
     font-weight: 600;
@@ -73,7 +87,7 @@ body{
 .primary-button:hover{
     background-color: var(--button-hover);
     transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
 
@@ -150,7 +164,7 @@ a{
     align-items: center;
     gap: 1.5rem;
 }
-                                            /* BANNER */
+                                                                                                 /* BANNER */
 
 #banner{
     position: relative;
@@ -169,12 +183,7 @@ a{
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom right, 
-        rgba(11, 59, 110, 0.9),
-        rgba(11, 59, 110, 0.8),
-        rgba(17, 95, 92, 0.7)
-    );
+    background: var(--gradient);
     z-index: 1;
 }
 .banner-content{
@@ -186,19 +195,19 @@ a{
     margin: 10rem auto 0;
     display: flex;
     align-items: center;
-    background-color: transparent;
-    border: 0.01rem solid var(--main-text);
+    background-color: var(--transparent);
+    border: 0.01rem solid var(--light-blue);
     border-radius: 1.5rem;
-    background-color: rgba(238, 238, 238, 0.1);
+    background-color: var(--credential-bg);
     backdrop-filter: blur(.2rem);
     padding: .5rem 1.9rem;
-    color: #FFFFFF;
+    color: var(--light-blue);
     gap: .5rem;
 }
 #banner h3{
     max-width: 50rem;
     margin: 1rem auto 0;
-    color: #ffffff;
+    color: var(--white-text);
     font-weight: 300;
     line-height: 1.6;
     font-size: 1.5rem;
@@ -211,6 +220,9 @@ a{
     height: 120px;
     z-index: 2;
 }
+.banner-wave path {
+  fill: var(--bg-color);
+}
 .banner-buttons{
     margin: 1rem 0 4rem 0; 
     padding: 0;
@@ -220,7 +232,7 @@ a{
 }
 #schedule-button{
     background-color: var(--button);
-    color: #FFFFFF;
+    color: var(--white-text);
     border: 0;
     border-radius: .8rem;
     font-size: 1rem;
@@ -233,7 +245,7 @@ a{
 #schedule-button:hover{
     background-color: var(--button-hover);
     transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
                                                         /* MAIN */
@@ -245,6 +257,7 @@ a{
 }
 #about h2{
     margin-bottom: 1rem;
+    color: var(--title-text);
 }
 #about p{
     font-size: 1.05rem;
@@ -255,17 +268,18 @@ a{
     padding: 5rem 18rem;
 }
 #main-title{
-    color: var(--bg-color);
+    color: var(--white-text);
     font-weight: 800;
     font-size: 5rem;
 }
-span{
-    background-image: linear-gradient(to right, #42b1c5, #166764);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+#main-title span {
+  background: var(--button-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--transparent);
 }
 .banner-content h3{
-    color: var(--bg-color);
+    color: var(--white-text);
     font-weight: 300;
 }
 .cards-container{
@@ -278,23 +292,23 @@ span{
     justify-content: center;
 }
 .secondary-button{
-    background-color: transparent;
+    background-color: var(--transparent);
     border: 0.01rem solid var(--main-text);
     border-radius: .8rem;
-    color: #FFFFFF;
-    background-color: rgba(238, 238, 238, 0.1);
+    color: var(--white-text);
+    background-color: var(--credential-bg);
     backdrop-filter: blur(.2rem);
     padding: .9rem 3rem;
     margin-top: 0rem;
 }
 .secondary-button:hover{
     cursor: pointer;
-    background-color: rgba(254, 254, 254, 0.3);
+    background-color: var(--secondary-button-hover);
 }
 .card{
     background-color: var(--cards-fill);
     padding: 3rem;
-    border: 0.01rem solid var(--border);
+    border: 0.0001rem solid var(--blue-icon-background);
     border-radius: 1rem;
     text-align: center;
     max-width: 20rem;
@@ -304,13 +318,14 @@ span{
 }
 .card:hover{
     transform: scale(1.02);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
 .card h5{
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 600;
+    color: var(--title-text);
 }
 .card ul{
     margin-top: 1rem;
@@ -322,7 +337,7 @@ span{
     text-align: left;
 }
 .icon-container{
-    background-color: var(--light-blue);
+    background-color: var(--blue-icon-background);
     width: 4.2rem;
     padding: 1rem;
     border-radius: 5rem;
@@ -330,7 +345,7 @@ span{
 }
 .primary-button{
     background-color: var(--button);
-    color: #FFFFFF;
+    color: var(--white-text);
     border: 0;
     border-radius: .8rem;
     font-size: 1rem;
@@ -342,7 +357,7 @@ span{
 .primary-button:hover{
     background-color: var(--button-hover);
     transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
                                                                                         /* TESTIMONIALS */
@@ -374,6 +389,7 @@ span{
 }
 #solutions h2{
     margin-bottom: 1rem;
+    color: var(--white-text);
 }
 #solutions p{
     font-size: 1.05rem;
@@ -405,7 +421,7 @@ span{
 }
 .card2:hover{
     transform: scale(1.02);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
 .card2:last-child{
@@ -472,7 +488,7 @@ span{
 }
 .list:hover{
     transform: scale(1.02);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
     cursor: pointer;
 }
 .list h6{
@@ -593,8 +609,8 @@ form{
     flex-direction: row;
 }
 .form-button button{
-    background: linear-gradient(135deg, #10bc86, #21a9c0);
-    color: #ffff;
+    background: var(--button-gradient);
+    color: var(--bg-color);
     display: block;
     font-weight: 800;
     border: none;
@@ -610,7 +626,7 @@ form{
 }
 .form-button button:hover{
     transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 24px var(--shadow);
 }
 aside{
     display: flex;
@@ -667,7 +683,7 @@ aside{
 }
 .partnering{
     align-items: start;
-    background-color: #f3f8fa;
+    background-color: var(--footer-copyright);
     border: 0.01 solid var(--border);
     border-radius: 1rem;
     padding: 3rem 3rem 3rem .7rem;
@@ -701,7 +717,7 @@ footer a{
     padding: 2rem 4rem;
     display: flex;
     flex-direction: row;
-    color: #FFFFFF;
+    color: var(--bg-color);
     gap: 7rem;
 }
 .links ul{
