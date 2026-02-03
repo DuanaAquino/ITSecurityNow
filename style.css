@@ -28,7 +28,7 @@
     --blue-icon-background: #87bfcab2;
     --green-icon: #115e59;
     --green-icon-background: #6a9696;   
-    --purple-icon: #472f5e;
+    --purple-icon: #614369;
     --purple-icon-background: #bba2d3;
     --form-background: #f9fafb;
     --footer-copyright: #b6c5da;
@@ -43,21 +43,21 @@
     --header-bg-color: #ffffff80;
     --credential-bg: #eeeeee1a;
     --gradient: linear-gradient(to right, #0b3b6ee6, #0b3b6ecc, #115f5cb3);
-    --button: #479dff;
+    --button: #115e59;
     --button-gradient: linear-gradient(to right, #57e6ff, #20928e);
     --logo-text: #FFFFFF;
     --button-hover: #4fb0ff;
     --secondary-button-hover: #fefefe4d;
     --border: #334155;
-    --cards-fill: #00202c70;
+    --cards-fill: #01334670;
     --main-text: #94a3b8;
     --white-text: #FFFFFF;
     --title-text: #FFFFFF;
     --light-blue: #67e8f9;
     --testimonials-fill: #1e293b;
-    --why-background: #043235;
+    --why-background: #03262f7b;
     --blue-icon: #67e8f9;
-    --blue-icon-background: #2d676e;
+    --blue-icon-background: #153e43c1;
     --green-icon: #22c581;
     --green-icon-background: #126456;
     --purple-icon: #a855f7;
@@ -259,14 +259,18 @@ a{
     margin-bottom: 1rem;
     color: var(--title-text);
 }
+#about span{
+    color: var(--blue-icon);
+}
 #about p{
     font-size: 1.05rem;
     line-height: 1.7rem;
     color: var(--menu-links);
 }
 .text-container{
-    padding: 5rem 18rem;
+    padding: 5rem 30rem 1rem;
 }
+
 #main-title{
     color: var(--white-text);
     font-weight: 800;
@@ -284,7 +288,7 @@ a{
 }
 .cards-container{
     width: 100%;
-    padding: 4rem;
+    padding: 1rem 4rem 4rem;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -296,6 +300,8 @@ a{
     border: 0.01rem solid var(--main-text);
     border-radius: .8rem;
     color: var(--white-text);
+    font-size: 1rem;
+    font-weight: 800;
     background-color: var(--credential-bg);
     backdrop-filter: blur(.2rem);
     padding: .9rem 3rem;
@@ -308,7 +314,7 @@ a{
 .card{
     background-color: var(--cards-fill);
     padding: 3rem;
-    border: 0.0001rem solid var(--blue-icon-background);
+    border: 0.0001rem solid var(--blue-icon);
     border-radius: 1rem;
     text-align: center;
     max-width: 20rem;
@@ -389,12 +395,15 @@ a{
 }
 #solutions h2{
     margin-bottom: 1rem;
-    color: var(--white-text);
+    color: var(--title-text);
 }
 #solutions p{
     font-size: 1.05rem;
     line-height: 1.7rem;
     color: var(--menu-links);
+}
+#solutions .text-container span{
+    color: var(--blue-icon)
 }
 .cards2-container{
     display: grid;
@@ -404,15 +413,17 @@ a{
     gap: 1.5rem;
 }
 .icon-container-start-alignment{
-    background-color: var(--light-blue);
-    width: 4.2rem;
+    background-color: var(--blue-icon-background);
+    display: flex;
+    align-self: center;
+    width: 4rem;
     padding: 1rem;
-    border-radius: 5rem;
+    border-radius: 4rem;
 }
 .card2{
     background-color: var(--cards-fill);
     padding: 2rem;
-    border: 0.01rem solid var(--border);
+    border: 0.0001rem solid var(--blue-icon);
     border-radius: 1rem;
     text-align: start;
         transition: 
@@ -431,6 +442,7 @@ a{
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 600;
+    color: var(--title-text);
 }
 .card2 p{
     margin-top: 1rem;
@@ -454,6 +466,10 @@ a{
 }
 #why h2{
     margin-bottom: 1rem;
+    color: var(--title-text);
+}
+#why span { 
+    color: var(--blue-icon);
 }
 #why p{
     margin-top: 1rem;
@@ -469,7 +485,7 @@ a{
 
 }
 .green-check{
-    stroke: var(--green-icon);
+    stroke: var(--blue-icon);
     margin-right: 1rem;
     width: .7rem;
     height: .7rem;
@@ -478,6 +494,7 @@ a{
     display: flex;
     flex-direction: row;
     background: var(--why-background);
+    border: 0.0001rem solid var(--border);
     border-radius: 1rem;
     list-style-type: none;
     gap: .5rem;
@@ -495,6 +512,7 @@ a{
     font-size: 1.05rem;
     margin-bottom: .6rem;
     font-weight: 600;
+    color: var(--title-text);
 }
 .list p{
     color: var(--main-text);
@@ -503,7 +521,7 @@ a{
 .reasons-icon{
     width: 2rem;
     height: 2rem;
-    stroke: var(--button);
+    stroke: var(--blue-icon);
 }
 
                                                     /* HEALTHCARE INDUSTRY FOCUS */
@@ -514,15 +532,20 @@ a{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 0;
+    padding: 5rem 32rem;
 }
 #focus h2{
     margin-bottom: 1rem;
+    color: var(--title-text);
 }
 #focus p{
     margin-top: 1rem;
     font-size: 1.05rem;
     line-height: 1.7rem;
     color: var(--menu-links);
+}
+#focus span{
+    color:var(--blue-icon);
 }
 .blue-icon-container{
     background-color: var(--blue-icon-background);
