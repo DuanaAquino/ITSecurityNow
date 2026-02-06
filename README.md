@@ -1,4 +1,4 @@
-# Avexla Website (Light & Dark Mode)
+# Avexla Website 
 
 This project is a responsive website for the Healthcare Technology Solutions company named AVEXLA.
 The Website implements a **Light / Dark Mode toggle**, allowing users to switch themes with a single click. The selected theme is saved using **localStorage**, so the preference persists even after refreshing the page.
