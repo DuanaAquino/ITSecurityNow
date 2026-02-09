@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+
+<body data-theme="light">
+    <header>
+        <div id="logo">
+            <a href="./index.html"><img src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png"
+                    width="350" alt="AVEXLA LOGO"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./solutions.html">Solutions</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="">Call Center Solutions</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="nav-buttons">
+            <button class="theme-toggle">
+                <!-- sun icon -->
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-sun-icon lucide-sun">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                <!-- moon icon -->
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-moon-icon lucide-moon">
+                    <path
+                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
+            </button>
+            <button class="primary-button">
+                Get Started
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="form-container">
+            <form action="/submit-page" method="POST">
+                <div class="input">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="blank" id="name" name="user_name" required>
+                </div>
+                <div class="input">
+                    <label for="mail">E-mail</label>
+                    <input type="e-mail" class="blank" id="mail" name="user_mail">
+                </div>
+                <div class="input">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="blank" id="phone-number" name="phone_number" pattern="[0-9]{10,11}"
+                        title="Digite um número de telefone válido (apenas números)">
+                </div>
+                <div class="input">
+                    <label for="msg">Message</label>
+                    <textarea id="msg-blank" name="user_message"></textarea>
+                </div>
+                <div class="form-button">
+                    <button type="submit">Schedule a Consultation</button>
+                    <button class="secondary-button">Contact Us</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <ul class="contact">
+                <li>
+                    <div id="mail-icon">
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h6>E-mail Us</h6>
+                        <p>info@avexla.com <br>
+                            support@avexla.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="phone-icon">
+                        <svg class="purple-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-phone-icon lucide-phone">
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h6>Call Us</h6>
+                        <p>+1 (800) 123-4567 <br>
+                            Mon-Fri 8AM-6PM EST</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="pin-icon">
+                        <svg class="green-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin-icon lucide-map-pin">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h6>Visit Us</h6>
+                        <p>123 Healthcare Drive <br>
+                            Suite 100 <br>
+                            Medical City, MC 12345</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="partnering">
+                <h5>Insights for Healthcare Innovators</h5>
+                <ul>
+                    <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-check-icon lucide-check">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>The Future of AI in Healthcare</li>
+                    <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-check-icon lucide-check">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>How AI Is Transforming Healthcare Call Centers</li>
+                    <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-check-icon lucide-check">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>Building a Zero‑Trust Healthcare Environment</li>
+                    <li><svg class="green-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-check-icon lucide-check">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>Cloud Modernization for Large Practices</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="links">
+            <div class="logo-area">
+                <img class="white-logo"
+                    src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_White Linear.png" alt="ITSN Logo">
+                <p>Your trusted partner for secure AI, cloud, IT, and compliance solutions in healthcare.</p>
+            </div>
+            <ul class="links-list">
+                <li><a href=""><b>Services</b></a></li>
+                <li><a href="">Cybersecurity</a></li>
+                <li><a href="">Cloud Solutions</a></li>
+                <li><a href="">AI Integration</a></li>
+                <li><a href="">Compliance</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><b>Company</b></a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Industries</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+            <ul>
+                <li><a href=""><b>Legal</b></a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">HIPAA Compliance</a></li>
+                <li><a href="">Security</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <div class="copyright-inner">
+                <p>© 2025 IT Security Now. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./avexla.js"></script>
+</body>
+
+</html>
