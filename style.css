@@ -1012,3 +1012,62 @@ footer a{
 
                                                             /* CALL CENTER */
 
+.callcenter-tab-title{
+    padding: 0 10rem;
+}
+.callcenter-tab-title span{
+    color: var(--blue-icon);
+}
+.callcenter-tab-title h2{
+    margin-top: 9rem;
+    color: var(--title-text);
+    text-align: center;
+}
+.callcenter-tab-title p{
+    color: var(--main-text);
+    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    text-align: center;
+}
+.callcenter-tab h2{
+    margin-top: 4rem;
+    color: var(--title-text);
+    text-align: center;
+}
+.callcenter-tab h3{
+    color: var(--title-text);
+    margin: 2rem 3rem 0;
+    text-align: center;
+}
+.callcenter-tab p{
+    color: var(--main-text);
+    font-size: 1.05rem;
+    margin: 4rem 2rem;
+    text-align: center;
+}
+.callcenter-tab span{
+    color: var(--blue-icon);
+}
+.callcenter-tab-card ul{
+    color: var(--main-text);
+    margin: 2rem auto;
+    text-align: start;
+    line-height: 1.5rem;
+    padding: 0 6rem;
+}
+.callcenter-tab-card h3{
+    color: var(--title-text);
+    text-align: center;
+}
+.callcenter-tab-card{
+    background-color: var(--cards-fill);
+    padding: 2rem 0;
+    border: 0.0001rem solid var(--blue-icon);
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin: 3rem auto 0;
+    max-width: 27rem;
+    transition: 
+        transform 0.7s ease,
+        box-shadow 0.2s ease;
+}
