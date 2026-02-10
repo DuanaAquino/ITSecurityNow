@@ -769,10 +769,12 @@ aside{
 }
 .contact h6{
     font-size: 1rem;
+    color: var(--title-text);
 }
 .contact p{
     font-size: .9rem;
     margin-top: .3rem;
+    color: var(--title-text);
 }
 .partnering{
     align-items: start;
@@ -1070,4 +1072,50 @@ footer a{
     transition: 
         transform 0.7s ease,
         box-shadow 0.2s ease;
+}
+.callcenter-tab-cards-container{
+    width: 80%;
+    padding: 2rem 6rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 3fr));
+    margin: 3rem auto 0;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+                                                            /* CONTACT */
+
+.form-tab-container{
+    width: 57%;
+    padding: 0 7rem 0 5rem;
+    margin: 12rem auto;
+    display: flex;
+    flex-direction: row;
+}
+.contact-tab{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--title-text);
+}
+.contact-tab-button button{
+    background: var(--button-gradient);
+    color: var(--white-text);
+    display: block;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    margin: auto;
+    width: 33rem;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.contact-tab-button button:hover{
+    transform: scale(1.04);
+    box-shadow: 0 10px 24px var(--shadow);
 }
