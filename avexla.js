@@ -21,3 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.classList.toggle("lucide-moon", newTheme === "dark");
   });
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+});

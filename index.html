@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -12,9 +12,13 @@
 <body data-theme="light">
     <header>
         <div id="logo">
-            <a href="./index.html"><img src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png" width="350"
-                alt="AVEXLA LOGO"></a>
+            <a href="https://www.avexla.com"><img
+                    src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png" width="350"
+                    alt="AVEXLA LOGO"></a>
         </div>
+
+        <button class="menu-toggle">☰</button>
+
         <nav>
             <ul>
                 <li><a href="./solutions.html">Solutions</a></li>
@@ -26,9 +30,9 @@
         <div id="nav-buttons">
             <button class="theme-toggle">
                 <!-- sun icon -->
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-sun-icon lucide-sun">
                     <circle cx="12" cy="12" r="4" />
                     <path d="M12 2v2" />
                     <path d="M12 20v2" />
@@ -40,7 +44,12 @@
                     <path d="m19.07 4.93-1.41 1.41" />
                 </svg>
                 <!-- moon icon -->
-                 <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-moon-icon lucide-moon">
+                    <path
+                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
             </button>
             <button class="primary-button">
                 Get Started
@@ -78,7 +87,8 @@
     <main>
         <section class="text-container" id="about">
             <h2>Modern Technology for<br><span>Modern Healthcare</span></h2>
-            <p>Avexla unifies AI, cloud modernization, cybersecurity, workflow transformation, <br>and next‑generation call
+            <p>Avexla unifies AI, cloud modernization, cybersecurity, workflow transformation, <br>and next‑generation
+                call
                 center solutions into a single, <br>outcome‑driven strategy built for large healthcare practices and
                 health systems.<br>
                 Four Pillars:</p>
@@ -157,7 +167,7 @@
         <div>
             <button class="primary-button">See How It Works</button>
         </div>
-        <section class="reasons-why">
+        <section class="reasons-why container">
             <div id="why">
                 <h2>Why Healthcare Leaders <span>Choose Avexla</span></h2>
             </div>
@@ -378,10 +388,12 @@
             </div>
         </section>
         <button class="primary-button">Start Your Assessment</button>
-        <section class="testimonials">
-            <h4>What Healthcare Leaders Are Saying</h4>
-            <p><em>“Avexla modernized our call center and dramatically improved patient access.”</em></p>
-            <p><em>“Our infrastructure is more secure, more reliable, and more future‑ready.”</em></p>
+        <section class="testimonials row">
+            <div>
+                <h4>What Healthcare Leaders Are Saying</h4>
+                <p><em>“Avexla modernized our call center and dramatically improved patient access.”</em></p>
+                <p><em>“Our infrastructure is more secure, more reliable, and more future‑ready.”</em></p>
+            </div>
         </section>
         <section class="form-title">
             <div>
@@ -391,7 +403,7 @@
             </div>
         </section>
         <section class="form-area">
-             <section class="form-container">
+            <section class="form-container">
                 <form action="/submit-page" method="POST">
                     <div class="input">
                         <label for="name">Full Name</label>
@@ -509,10 +521,10 @@
                 <p>Your trusted partner for secure AI, cloud, IT, and compliance solutions in healthcare.</p>
             </div>
             <ul class="links-list">
-                <li><a href=""><b>Services</b></a></li>
-                <li><a href="">Cybersecurity</a></li>
-                <li><a href="">Cloud Solutions</a></li>
-                <li><a href="">AI Integration</a></li>
+                <li><a href="./solutions.html"><b>Services</b></a></li>
+                <li><a href="#cybersecurity">Cybersecurity</a></li>
+                <li><a href="#cloud">Cloud Solutions</a></li>
+                <li><a href="#ai">AI Integration</a></li>
                 <li><a href="">Compliance</a></li>
             </ul>
             <ul>
@@ -538,4 +550,5 @@
     </footer>
     <script src="./avexla.js"></script>
 </body>
+
 </html>
