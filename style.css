@@ -1482,6 +1482,7 @@ footer a {
 
     .cards-container {
         grid-template-columns: repeat(4, 1fr);
+        padding: 0 12rem 3rem;
     }
 
     .cards2-container {
@@ -1490,6 +1491,31 @@ footer a {
 
     .cards3-container {
         grid-template-columns: repeat(3, 1fr);
+        padding: 0rem 10rem 3rem;
+    }
+
+    .form-area{
+        padding: 0 15rem 3rem;
+    }
+
+    .form-tab-container{
+        padding: 0 12rem 3rem;
+    }
+
+    .callcenter-tab-cards-container .card:nth-child(5) {
+        grid-column: 2; 
+    }
+
+    .solutions-tab h2{
+        margin-top: 5rem;
+    }
+
+    .why-list{
+        padding: 0 10rem 3rem;
+    }
+
+    .cta-button{
+        margin-top: 1rem;
     }
 
     #banner {
