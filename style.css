@@ -1037,6 +1037,7 @@ footer a {
 .why-list {
     display: flex;
     flex-direction: row;
+    padding: 0 4rem;
 }
 
 .why-list-item {
