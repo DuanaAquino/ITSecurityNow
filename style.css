@@ -1288,7 +1288,7 @@ footer a {
 
 @media (max-width:767px) {
 
-    header{
+    header {
         max-width: 100%;
     }
 
@@ -1394,6 +1394,37 @@ footer a {
 
     /* NAVBAR */
 
+    #nav-buttons .primary-button {
+        display: none;
+    }
+
+    /* Garante que o container de botões não empurre o menu */
+    #nav-buttons {
+        display: flex;
+        flex-direction: row;
+        /* Garante que fiquem lado a lado */
+        align-items: center;
+        gap: .1rem;
+        /* Espaço entre a lua/sol e o hambúrguer */
+        margin-left: auto;
+        /* Ajusta o espaço entre o toggle de tema e o hambúrguer */
+    }
+
+    /* Força o menu hambúrguer a ser o último item à direita */
+    .menu-toggle {
+        display: block;
+        padding: 0 2rem;
+        order: 2;
+        /* Garante que ele fique depois do theme-toggle se necessário */
+    }
+
+    /* Opcional: ajustar o alinhamento do header */
+    header {
+        padding: .8rem 1.5rem;
+        /* Diminui o padding lateral em telas menores */
+        justify-content: space-between;
+    }
+
     nav {
         display: none;
     }
@@ -1429,9 +1460,10 @@ footer a {
     .cards2-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .card2:last-child {
         grid-column: 1 / span 2;
-        justify-self: center;    
+        justify-self: center;
         width: 50%;
     }
 
@@ -1449,12 +1481,17 @@ footer a {
 
     /* 3 STEPS */
 
+    #focus {
+        padding: 3rem 17rem 3rem;
+    }
+
     .cards3-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .card3:last-child {
+
+    .cards3-container>*:nth-child(3) {
         grid-column: 1 / span 2;
-        justify-self: center;    
+        justify-self: center;
         width: 50%;
     }
 
@@ -1462,69 +1499,115 @@ footer a {
 
     .form-area {
         flex-direction: column;
+        padding: 0 9rem;
         gap: 2rem;
+        margin: auto;
     }
 
     .form-container,
     aside {
-        width: 100%;
+        width: 96%;
+    }
+
+    aside{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 4rem;
+        gap: 3rem;
+        margin: 0 auto 5rem;
     }
 
     /* FOOTER */
 
     .links {
+        background-color: var(--footer-bg);
+        padding: 4rem 2rem;
+        display: flex;
         flex-direction: column;
-        gap: 2rem;
+        /* Empilha os blocos */
+        align-items: center;
+        /* Centraliza os blocos horizontalmente */
+        text-align: center;
+        /* Centraliza o texto interno */
+        gap: 3rem;
     }
 
+    .logo-area {
+        width: 100%;
+        /* Remove os 30% que causavam o desalinhamento */
+        padding-right: 0;
+        /* Remove o padding lateral */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza a logo e o texto da logo */
+    }
+
+    .links-list {
+        width: 100%;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        /* Centraliza a lista de links */
+        gap: 4rem;
+        flex-wrap: wrap;
+        /* Garante que quebre linha se não couber */
+    }
+    .links-list > li{
+        display: none;
+    }
+    .copyright{
+        margin-top: -9rem;
+    }
 }
 
-@media (min-width:1400px) {
+    @media (min-width:1400px) {
 
-    .cards-container {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 0 12rem 3rem;
+        .cards-container {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0 12rem 3rem;
+        }
+
+        .cards2-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cards3-container {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0rem 10rem 3rem;
+        }
+
+        .form-area {
+            padding: 0 15rem 3rem;
+        }
+
+        .form-tab-container {
+            padding: 0 12rem 3rem;
+        }
+
+        .callcenter-tab-cards-container .card:nth-child(5) {
+            grid-column: 2;
+        }
+
+        .solutions-tab h2 {
+            margin-top: 5rem;
+        }
+
+        .why-list {
+            padding: 0 10rem 3rem;
+        }
+
+        .cta-button {
+            margin-top: 1rem;
+        }
+
+        #banner {
+            padding: 8rem 10rem;
+        }
+
+        .text-container {
+            padding: 6rem 12rem;
+        }
+
     }
-
-    .cards2-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .cards3-container {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0rem 10rem 3rem;
-    }
-
-    .form-area{
-        padding: 0 15rem 3rem;
-    }
-
-    .form-tab-container{
-        padding: 0 12rem 3rem;
-    }
-
-    .callcenter-tab-cards-container .card:nth-child(5) {
-        grid-column: 2; 
-    }
-
-    .solutions-tab h2{
-        margin-top: 5rem;
-    }
-
-    .why-list{
-        padding: 0 10rem 3rem;
-    }
-
-    .cta-button{
-        margin-top: 1rem;
-    }
-
-    #banner {
-        padding: 8rem 10rem;
-    }
-
-    .text-container {
-        padding: 6rem 12rem;
-    }
-
-}
