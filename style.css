@@ -137,6 +137,48 @@ header {
     color: var(--title-text);
 }
 
+/* Estilo do Menu Mobile (Overlay) */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Começa fora da tela */
+    width: 80%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: 0.4s ease;
+    box-shadow: -10px 0 24px var(--shadow);
+}
+
+/* Classe que o JS vai adicionar para abrir */
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.mobile-nav ul li {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--title-text);
+    cursor: pointer;
+}
+
 #logo {
     display: flex;
     flex-direction: row;
@@ -1352,7 +1394,7 @@ footer a {
         display: none;
     }
 
-    #nav-buttons > .primary-button{
+    #nav-buttons>.primary-button {
         display: none;
     }
 
@@ -1700,7 +1742,7 @@ footer a {
         margin-right: 1rem !important;
     }
 
-    #nav-buttons > .primary-button{
+    #nav-buttons>.primary-button {
         display: none;
     }
 
@@ -1721,7 +1763,7 @@ footer a {
         cursor: pointer;
     }
 
-    nav > ul{
+    nav>ul {
         display: none;
     }
 
