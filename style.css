@@ -143,15 +143,15 @@ header {
     top: 0;
     right: -100%;
     /* Começa fora da tela */
-    width: 80%;
+    max-width: 50%;
     height: 100vh;
     background-color: var(--bg-color);
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.5rem;
     transition: 0.4s ease;
-    box-shadow: -10px 0 24px var(--shadow);
+    box-shadow: -5px 0 15px var(--shadow);
 }
 
 /* Classe que o JS vai adicionar para abrir */
@@ -160,13 +160,26 @@ header {
 }
 
 .mobile-nav ul {
+    display: flex;
     flex-direction: column;
     margin-top: 3rem;
     gap: 2rem;
+    list-style: none;
 }
 
 .mobile-nav ul li {
     font-size: 1.5rem;
+    text-align: left;
+}
+
+.mobile-nav ul li a {
+    display: block; /* Faz o link ocupar a linha toda para facilitar o clique */
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--menu-links);
+    border-radius: 0.5rem; /* Arredonda os cantos para o efeito de hover */
+    transition: all 0.3s ease;
     text-align: left;
 }
 
