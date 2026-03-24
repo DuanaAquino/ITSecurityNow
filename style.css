@@ -109,6 +109,16 @@ h3 {
     cursor: pointer;
 }
 
+.menu-toggle {
+    display: none;
+    /* Escondido no PC */
+}
+
+.desktop-nav {
+    display: block;
+    /* Mostra no PC */
+}
+
 /* ---------       HEADER        ---------                       */
 
 header {
@@ -163,7 +173,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -173,12 +183,14 @@ header {
 }
 
 .mobile-nav ul li a {
-    display: block; /* Faz o link ocupar a linha toda para facilitar o clique */
+    display: block;
+    /* Faz o link ocupar a linha toda para facilitar o clique */
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--menu-links);
-    border-radius: 0.5rem; /* Arredonda os cantos para o efeito de hover */
+    border-radius: 0.5rem;
+    /* Arredonda os cantos para o efeito de hover */
     transition: all 0.3s ease;
     text-align: left;
 }
@@ -213,6 +225,10 @@ header {
 #logo img {
     max-width: 100%;
     height: auto;
+}
+
+nav {
+    display: block;
 }
 
 nav ul {
@@ -1080,7 +1096,7 @@ footer a {
 
 .about-tab-cards-container {
     width: 100%;
-    padding: 2rem 6rem 3rem;
+    padding: 0rem 6rem 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.70rem, 1fr));
     flex-direction: row;
@@ -1349,15 +1365,39 @@ footer a {
     justify-content: space-between;
 }
 
+.menu-toggle {
+    display: none;
+    /* Escondido no PC */
+}
+
+.desktop-nav {
+    display: block;
+}
+
 
 /* RESPONSIVITY */
 
 @media (min-width: 320px) and (max-width: 768px) {
 
-    /* RESET & ESTRUTURA GERAL */
+    html,
     body {
-        overflow-x: hidden;
-        width: 100%;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        /* Impede a rolagem lateral */
+        position: relative;
+    }
+
+    * {
+        box-sizing: border-box !important;
+        /* Garante que padding não aumente o tamanho dos objetos */
+    }
+    
+    main{
+        margin: 0 1rem;
+    }
+
+    footer{
+        margin: -2rem;
     }
 
     section,
@@ -1442,41 +1482,11 @@ footer a {
         padding: 0 2rem;
     }
 
-    /* ✅ CONTAINERS - FORÇANDO 1 COLUNA REAL */
-    .cards-container,
-    .cards2-container,
-    .cards3-container,
-    .about-tab-cards-container,
-    .callcenter-tab-cards-container {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        /* Aqui garante o 1fr */
-        gap: 1.5rem;
-        padding: 2rem 1.5rem !important;
-        /* Resetando o padding de 12rem do desktop */
-        width: 100% !important;
-        max-width: 100vw;
-        box-sizing: border-box;
-    }
-
-    /* ✅ CARDS - RESETANDO LARGURAS FIXAS */
-    .card,
-    .card2,
-    .card3,
-    .solutions-tab-card,
-    .callcenter-tab-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        /* Mata o '20rem' do desktop */
-        margin: 0 auto !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-    }
-
-    #solutions {
-        padding: 1rem -2rem;
+    .solutions-tab-card li,
+    .callcenter-tab-card li {
+        font-size: 0.85rem !important;
+        /* Diminuir um pouco a letra ajuda no card menor */
+        word-break: break-word !important;
     }
 
     /* ✅ IGUALANDO O VISUAL DOS CARDS 2 AO DOS CARDS 1 */
@@ -1510,22 +1520,66 @@ footer a {
 
     /* ✅ TEXTOS E SEÇÕES */
     .text-container,
-    #focus,
+    #focus, #solutions,
     .form-title,
     .solutions-tab-title,
     .callcenter-tab-title,
     .our-story {
-        padding: 2rem 1rem !important;
+        padding: .8rem .8rem !important;
         width: 100%;
     }
 
+    /* 🔥 CONTAINERS LIMPOS */
+    .cards-container,
     .cards2-container,
-    .cards3-container {
+    .cards3-container,
+    .about-tab-cards-container,
+    .solutions-tab-cards-container,
+    .callcenter-tab-cards-container {
         display: grid !important;
         grid-template-columns: 1fr !important;
-        /* Força 1 coluna */
+        gap: 1.5rem;
+        padding: 2rem 1.2rem !important; 
         width: 100% !important;
+        box-sizing: border-box;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+
+    /* 🔥 TODOS OS CARDS IGUAIS */
+    .card,
+    .card2,
+    .solutions-tab-card,
+    .callcenter-tab-card,
+    .about-tab-card {
+        width: 100% !important;
+        max-width: 100% !important;
         margin: 0 auto !important;
+        padding: 1.5rem !important;
+        box-sizing: border-box;
+    }
+
+    /* 🔥 REMOVE AJUSTES DE DESKTOP */
+    .card2:last-child,
+    .cards3-container>*:nth-child(3),
+    .callcenter-tab-cards-container .card:nth-child(5) {
+        grid-column: auto !important;
+    }
+
+    /* 🔥 LISTAS CORRIGIDAS */
+    .solutions-tab-card>ul,
+    .callcenter-tab-card>ul {
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin: 1rem 0 !important;
+        text-align: left;
+    }
+
+    /* 🔥 TEXTO NÃO QUEBRA */
+    .solutions-tab-card li,
+    .callcenter-tab-card li {
+        word-break: break-word;
     }
 
     .primary-button {
@@ -1609,10 +1663,15 @@ footer a {
         /* Remove as margens laterais de 5rem */
     }
 
-    .list {
+    .list,
+    .why-list-item {
         margin: 0 auto !important;
         padding: 1rem;
         width: 80%;
+    }
+
+    .why-list ul {
+        padding: 0 3rem;
     }
 
     #reasons>ul {
@@ -1680,11 +1739,13 @@ footer a {
         width: 100%;
         justify-content: center !important;
     }
-
+    .form-button > .secondary-button{
+        display: none;
+    }
     .form-button button {
         width: 100% !important;
         /* Botão largo para facilitar o clique */
-        max-width: 300px;
+        max-width: 100%;
         /* Mas não exagerado */
     }
 
@@ -1722,7 +1783,236 @@ footer a {
         padding-left: 0 !important;
         text-align: center;
     }
-}
+
+    /* --- Ajustes das Subpáginas (About, Solutions, etc) --- */
+    /* ABOUT */
+    /* Missão e Visão: de lado a lado para empilhado */
+    #mission-container {
+        display: flex;
+        flex-direction: column !important;
+        gap: 1.5rem;
+        margin: 2rem 1.5rem !important;
+        /* Remove as margens de 10rem do desktop */
+        width: auto !important;
+    }
+
+    .company-mission {
+        width: 100% !important;
+        padding: 2rem 1.5rem !important;
+    }
+    .company-mission > h3{
+        margin: auto;
+    }
+
+    .our-story > h2{
+        margin-top: -5rem;
+        padding-bottom: 0rem;
+    }
+
+    /* Seção Our Story e Textos */
+    .our-story {
+        padding: 3rem 1.5rem 0 !important;
+        /* Reduz os 11rem do desktop */
+    }
+
+    .our-story p {
+        font-size: 1.1rem !important;
+        margin: 2rem 0 0 !important;
+    }
+
+    /* Grid de Valores (Cards da página About) */
+    .about-tab-cards-container {
+        grid-template-columns: 1fr !important;
+        /* Uma coluna só */
+        padding: 2rem 1.5rem !important;
+    }
+
+    .contact-tab-button button {
+        max-width: 50%;
+    }
+
+    .form-tab-container {
+        margin: 2rem auto;
+        width: 100%;
+    }
+
+    .why-list {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        /* Centraliza a lista na tela */
+        padding: 1rem !important;
+        width: 100% !important;
+    }
+
+    .why-list ul {
+        width: 100% !important;
+        padding: 0 !important;
+        /* Remove os 3rem que estavam empurrando a lista */
+        margin: 0 !important;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza as LIs dentro da UL */
+    }
+
+    .why-list-item {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Ícone em cima do texto */
+        align-items: center !important;
+        /* Centraliza ícone e texto horizontalmente */
+        justify-content: center !important;
+        text-align: center !important;
+        /* Garante o texto centralizado */
+        width: 90% !important;
+        /* Um pouco mais largo para aproveitar a tela */
+        max-width: 400px;
+        margin: 1.5rem auto !important;
+        /* Espaçamento vertical entre os itens */
+        padding: 1rem !important;
+    }
+
+    /* Se houver um ícone ou container de ícone dentro do item */
+    .why-list-item i,
+    .why-list-item img,
+    .why-list-item .icon-container {
+        margin-bottom: 0.8rem !important;
+    }
+
+    /* Rodapé (Footer) Mobile */
+    .links {
+        flex-direction: column !important;
+        gap: 3rem;
+        padding: 3rem 2rem !important;
+        text-align: center;
+    }
+
+    .logo-area {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+
+    .links-list,
+    .links ul {
+        align-items: center;
+    }
+
+    .cards-container,
+    .cards2-container,
+    .cards3-container {
+        grid-template-columns: 1fr !important;
+        /* Força 1 coluna */
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* Ajuste do Formulário para não quebrar */
+    .form-area {
+        padding: 2rem 1rem !important;
+    }
+
+    .blank,
+    #msg-blank {
+        width: 100% !important;
+        /* Mata os 33rem fixos */
+    }
+
+    .about-tab-cards-container {
+        display: flex !important;
+        /* Às vezes o flex é mais estável para 1 coluna no mobile */
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 2rem 1rem !important;
+        width: 100% !important;
+    }
+
+    .solutions-tab-card,
+    .callcenter-tab-card,
+    .about-tab-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        /* Remove qualquer trava de largura mínima */
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        /* Reduzindo o padding interno para sobrar espaço para o conteúdo */
+        padding: 1.2rem !important;
+        margin: 1rem 0 !important;
+
+        box-sizing: border-box !important;
+        overflow-wrap: break-word;
+        /* Força quebra de palavras longas se necessário */
+    }
+
+    /* Ajuste das listas dentro dos cards para não "empurrarem" a borda */
+    .solutions-tab-card>ul,
+    .callcenter-tab-card>ul {
+        padding: 0 1rem 0 1.5rem !important;
+        /* Padding menor e apenas na esquerda para o bullet */
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        /* Listas centralizadas costumam ocupar mais espaço */
+    }
+
+    .solutions-tab-card li,
+    .callcenter-tab-card li {
+        max-width: 100% !important;
+        word-break: break-word;
+    }
+
+    .callcenter-tab-card>ul {
+        padding: 1rem 2rem;
+    }
+
+    .links-list>li {
+        display: none;
+    }
+
+    .solutions-tab-title>h2,
+    .callcenter-tab-title>h2,
+    .callcenter-tab>h2,
+    .about-us-tab {
+        margin: 0rem;
+    }
+
+    #ai {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        max-width: 70%;
+    }
+
+    .solutions-tab-cards-container,
+    .callcenter-tab-cards-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        /* O SEGREDO: Use padding para criar a margem da borda */
+        padding: 2rem 1.5rem !important;
+
+        /* Garante que o padding não "estique" o container para fora da tela */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* O CARD INDIVIDUAL */
+    .solutions-tab-card,
+    .callcenter-tab-card {
+        width: 100% !important;
+        /* Ele ocupa 100% do espaço disponível DENTRO do padding do pai */
+        max-width: 100% !important;
+        margin-bottom: 1.5rem !important;
+        /* Espaço entre um card e outro */
+
+        /* Se você quiser que o card não seja tão largo em celulares grandes */
+        /* max-width: 400px !important; */
+    }
 
 @media (max-width:1024px) {
 
@@ -1737,6 +2027,46 @@ footer a {
         width: 100%;
         box-sizing: border-box;
     }
+
+    /* Reduzir margens exageradas do desktop */
+    .text-container,
+    .our-story,
+    .solutions-tab-title,
+    .callcenter-tab-title {
+        padding: 5rem 4rem !important;
+    }
+
+    #mission-container {
+        margin: 0 4rem !important;
+        gap: 2rem;
+    }
+
+    /* Cards: Em vez de 4 ou 5 colunas, usamos 2 ou 3 */
+    .about-tab-cards-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 2rem 4rem !important;
+    }
+
+    .why-list {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Formulário no Tablet */
+    .form-container,
+    .form-tab-container {
+        width: 90% !important;
+        padding: 0 2rem !important;
+        margin: 5rem auto !important;
+    }
+
+    /* Footer no Tablet */
+    .links {
+        gap: 2rem;
+        padding: 4rem 2rem;
+        justify-content: space-between;
+    }
+
 
     #logo {
         max-width: 30%;
@@ -1907,8 +2237,6 @@ footer a {
     .links-list {
         width: 100%;
         display: none;
-        flex-direction: row;
-        justify-content: center;
         /* Centraliza a lista de links */
         gap: 4rem;
         flex-wrap: wrap;
@@ -1923,10 +2251,74 @@ footer a {
         margin-top: -9rem;
     }
 
+    .desktop-nav {
+        display: none !important;
+        /* Esconde menu horizontal */
+    }
+
+    .menu-toggle {
+        display: block !important;
+        /* Mostra o hambúrguer */
+        background: none;
+        border: none;
+        color: var(--title-text);
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+    }
+
+    /* Ajuste do layout do Header no Mobile */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .8rem 2rem;
+    }
+
+    .desktop-nav {
+        display: none !important;
+        /* Esconde o menu de texto horizontal */
+    }
+
+    .menu-toggle {
+        display: block !important;
+        /* Mostra o hambúrguer */
+        font-size: 2rem;
+        color: var(--title-text);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ajuste do grupo de botões para ficarem alinhados */
+    #nav-buttons {
+        gap: 0.5rem;
+    }
+
+    /* Garante que o menu lateral cubra a tela corretamente */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Escondido */
+        width: 280px;
+        height: 100vh;
+        background-color: var(--bg-color);
+        /* Variável do seu tema */
+        z-index: 2000;
+        transition: 0.4s ease-in-out;
+        padding: 80px 40px;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-nav.active {
+        right: 0;
+        /* Aparece */
+    }
 
 }
 
-@media (min-width:1400px) {
+@media (min-width:1025px) {
 
     .cards-container {
         grid-template-columns: repeat(4, 1fr);
@@ -1947,7 +2339,7 @@ footer a {
     }
 
     .form-tab-container {
-        padding: 0 12rem 3rem;
+        padding: 0 40rem 3rem;
     }
 
     .callcenter-tab-cards-container .card:nth-child(5) {

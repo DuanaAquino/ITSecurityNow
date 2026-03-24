@@ -12,9 +12,13 @@
 <body data-theme="light">
     <header>
         <div id="logo">
-            <a href="./index.html"><img src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png"
-                    width="350" alt="AVEXLA LOGO"></a>
+            <a href="https://www.avexla.com"><img
+                    src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png" width="350"
+                    alt="AVEXLA LOGO"></a>
         </div>
+
+        <button class="menu-toggle">☰</button>
+
         <nav>
             <ul>
                 <li><a href="./solutions.html">Solutions</a></li>
@@ -23,6 +27,15 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div id="mobile-menu" class="mobile-nav">
+            <button class="close-menu" id="close-menu">&times;</button>
+            <ul>
+                <li><a href="./solutions.html">Solutions</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./callcenter.html">Call Center Solutions</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
         <div id="nav-buttons">
             <button class="theme-toggle">
                 <!-- sun icon -->
@@ -81,45 +94,118 @@
             <section class="callcenter-tab-cards-container">
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-cog-icon lucide-calendar-cog"><path d="m15.228 16.852-.923-.383"/><path d="m15.228 19.148-.923.383"/><path d="M16 2v4"/><path d="m16.47 14.305.382.923"/><path d="m16.852 20.772-.383.924"/><path d="m19.148 15.228.383-.923"/><path d="m19.53 21.696-.382-.924"/><path d="m20.772 16.852.924-.383"/><path d="m20.772 19.148.924.383"/><path d="M21 10.592V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/><path d="M3 10h18"/><path d="M8 2v4"/><circle cx="18" cy="18" r="3"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-calendar-cog-icon lucide-calendar-cog">
+                            <path d="m15.228 16.852-.923-.383" />
+                            <path d="m15.228 19.148-.923.383" />
+                            <path d="M16 2v4" />
+                            <path d="m16.47 14.305.382.923" />
+                            <path d="m16.852 20.772-.383.924" />
+                            <path d="m19.148 15.228.383-.923" />
+                            <path d="m19.53 21.696-.382-.924" />
+                            <path d="m20.772 16.852.924-.383" />
+                            <path d="m20.772 19.148.924.383" />
+                            <path d="M21 10.592V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" />
+                            <path d="M3 10h18" />
+                            <path d="M8 2v4" />
+                            <circle cx="18" cy="18" r="3" />
+                        </svg>
                     </div>
                     <h5>AI‑Powered Patient Scheduling</h5>
-                    <p>Reduce wait times and improve accuracy with intelligent scheduling tools that adapt to patient needs and provider availability.</p>
+                    <p>Reduce wait times and improve accuracy with intelligent scheduling tools that adapt to patient
+                        needs and provider availability.</p>
                 </div>
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-antenna-icon lucide-antenna"><path d="M2 12 7 2"/><path d="m7 12 5-10"/><path d="m12 12 5-10"/><path d="m17 12 5-10"/><path d="M4.5 7h15"/><path d="M12 16v6"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-antenna-icon lucide-antenna">
+                            <path d="M2 12 7 2" />
+                            <path d="m7 12 5-10" />
+                            <path d="m12 12 5-10" />
+                            <path d="m17 12 5-10" />
+                            <path d="M4.5 7h15" />
+                            <path d="M12 16v6" />
+                        </svg>
                     </div>
                     <h5>Omnichannel Communication</h5>
                     <p>Meet patients where they are — voice, SMS, chat, and digital self‑service.</p>
                 </div>
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call-icon lucide-phone-call"><path d="M13 2a9 9 0 0 1 9 9"/><path d="M13 6a5 5 0 0 1 5 5"/><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-phone-call-icon lucide-phone-call">
+                            <path d="M13 2a9 9 0 0 1 9 9" />
+                            <path d="M13 6a5 5 0 0 1 5 5" />
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                        </svg>
                     </div>
                     <h5>Intelligent Call Routing</h5>
                     <p>Ensure patients reach the right person, the first time.</p>
                 </div>
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network-icon lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chart-network-icon lucide-chart-network">
+                            <path d="m13.11 7.664 1.78 2.672" />
+                            <path d="m14.162 12.788-3.324 1.424" />
+                            <path d="m20 4-6.06 1.515" />
+                            <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                            <circle cx="12" cy="6" r="2" />
+                            <circle cx="16" cy="12" r="2" />
+                            <circle cx="9" cy="15" r="2" />
+                        </svg>
                     </div>
                     <h5>Workforce Optimization</h5>
                     <p>Forecast demand, schedule agents efficiently, and reduce burnout.</p>
                 </div>
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined">
+                            <path d="M12 16v5" />
+                            <path d="M16 14v7" />
+                            <path d="M20 10v11" />
+                            <path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15" />
+                            <path d="M4 18v3" />
+                            <path d="M8 14v7" />
+                        </svg>
                     </div>
                     <h5>Quality Monitoring & Analytics</h5>
                     <p>Real‑time dashboards that track performance, satisfaction, and operational KPIs.</p>
                 </div>
                 <div class="card">
                     <div class="icon-container">
-                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-cog-icon lucide-folder-cog"><path d="M10.3 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.98a2 2 0 0 1 1.69.9l.66 1.2A2 2 0 0 0 12 6h8a2 2 0 0 1 2 2v3.3"/><path d="m14.305 19.53.923-.382"/><path d="m15.228 16.852-.923-.383"/><path d="m16.852 15.228-.383-.923"/><path d="m16.852 20.772-.383.924"/><path d="m19.148 15.228.383-.923"/><path d="m19.53 21.696-.382-.924"/><path d="m20.772 16.852.924-.383"/><path d="m20.772 19.148.924.383"/><circle cx="18" cy="18" r="3"/></svg>
+                        <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-folder-cog-icon lucide-folder-cog">
+                            <path
+                                d="M10.3 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.98a2 2 0 0 1 1.69.9l.66 1.2A2 2 0 0 0 12 6h8a2 2 0 0 1 2 2v3.3" />
+                            <path d="m14.305 19.53.923-.382" />
+                            <path d="m15.228 16.852-.923-.383" />
+                            <path d="m16.852 15.228-.383-.923" />
+                            <path d="m16.852 20.772-.383.924" />
+                            <path d="m19.148 15.228.383-.923" />
+                            <path d="m19.53 21.696-.382-.924" />
+                            <path d="m20.772 16.852.924-.383" />
+                            <path d="m20.772 19.148.924.383" />
+                            <circle cx="18" cy="18" r="3" />
+                        </svg>
                     </div>
                     <h5>Automation & Self‑Service</h5>
-                    <p>Automated reminders, follow‑ups, and appointment confirmations reduce call volume and improve patient engagement.</p>
+                    <p>Automated reminders, follow‑ups, and appointment confirmations reduce call volume and improve
+                        patient engagement.</p>
                 </div>
             </section>
             <div class="callcenter-tab-card">
@@ -163,14 +249,14 @@
                 <li><a href="#ai">AI Integration</a></li>
                 <li><a href="">Compliance</a></li>
             </ul>
-            <ul>
+            <ul class="links-list">
                 <li><a href=""><b>Company</b></a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Industries</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">Careers</a></li>
             </ul>
-            <ul>
+            <ul class="links-list">
                 <li><a href=""><b>Legal</b></a></li>
                 <li><a href="">Privacy Policy</a></li>
                 <li><a href="">Terms of Service</a></li>

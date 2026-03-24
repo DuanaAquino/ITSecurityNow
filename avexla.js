@@ -2,15 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- LÓGICA DO TEMA (DARK/LIGHT) ---
     const toggleButton = document.querySelector(".theme-toggle");
     const body = document.body;
-    const themeIcon = toggleButton ? toggleButton.querySelector("svg") : null;
 
-    if (toggleButton && themeIcon) {
+    if (toggleButton) {
         const savedTheme = localStorage.getItem("theme") || "light";
         body.setAttribute("data-theme", savedTheme);
-        
-        // Ajusta ícone inicial
-        themeIcon.classList.toggle("lucide-sun", savedTheme === "light");
-        themeIcon.classList.toggle("lucide-moon", savedTheme === "dark");
 
         toggleButton.addEventListener("click", () => {
             const isDark = body.getAttribute("data-theme") === "dark";
@@ -18,16 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             body.setAttribute("data-theme", newTheme);
             localStorage.setItem("theme", newTheme);
-
-            themeIcon.classList.toggle("lucide-sun", newTheme === "light");
-            themeIcon.classList.toggle("lucide-moon", newTheme === "dark");
         });
     }
 
     // --- LÓGICA DO MENU HAMBÚRGUER ---
     const menuToggle = document.querySelector(".menu-toggle");
-    const closeMenu = document.getElementById("close-menu");
-    const mobileNav = document.getElementById("mobile-menu");
+    // Ajustado para bater com as classes/IDs do seu CSS anterior
+    const closeMenu = document.querySelector(".close-menu"); 
+    const mobileNav = document.querySelector(".mobile-nav");
     const navLinks = document.querySelectorAll(".mobile-nav a");
 
     // Abre o menu
@@ -44,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Fecha o menu ao clicar em links
+    // Fecha o menu ao clicar em links (importante para Single Page Applications)
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            mobileNav.classList.remove("active");
+            if (mobileNav) mobileNav.classList.remove("active");
         });
     });
 });

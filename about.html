@@ -12,10 +12,12 @@
 <body data-theme="light">
     <header>
         <div id="logo">
-            <a href="./index.html"><img src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png"
-                    width="350" alt="AVEXLA LOGO"></a>
+            <a href="https://www.avexla.com"><img
+                    src="./assets/OneDrive_1_29-12-2025/ITSECURITYNOW_Logo_V2_Final_Teal Linear.png" width="350"
+                    alt="AVEXLA LOGO"></a>
         </div>
-        <nav>
+
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="./solutions.html">Solutions</a></li>
                 <li><a href="./about.html">About Us</a></li>
@@ -23,6 +25,15 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div id="mobile-menu" class="mobile-nav">
+            <button class="close-menu" id="close-menu">&times;</button>
+            <ul>
+                <li><a href="./solutions.html">Solutions</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./callcenter.html">Call Center Solutions</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
         <div id="nav-buttons">
             <button class="theme-toggle">
                 <!-- sun icon -->
@@ -44,8 +55,9 @@
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-moon-icon lucide-moon">
                     <path
-                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />l
                 </svg>
+            <button class="menu-toggle">☰</button>
             </button>
             <button class="primary-button">
                 Get Started
@@ -88,35 +100,71 @@
         <section class="about-tab-cards-container">
             <div class="card">
                 <div class="icon-container">
-                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blocks-icon lucide-blocks"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/><rect x="14" y="2" width="8" height="8" rx="1"/></svg>
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-blocks-icon lucide-blocks">
+                        <path
+                            d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" />
+                        <rect x="14" y="2" width="8" height="8" rx="1" />
+                    </svg>
                 </div>
                 <h5>Integrity</h5>
                 <p>Trust is our foundation.</p>
             </div>
             <div class="card">
                 <div class="icon-container">
-                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb">
+                        <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                        <path d="M9 18h6" />
+                        <path d="M10 22h4" />
+                    </svg>
                 </div>
                 <h5>Innovation</h5>
                 <p>We push boundaries responsibly.</p>
             </div>
             <div class="card">
                 <div class="icon-container">
-                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart-icon lucide-hand-heart"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"/><path d="m2 15 6 6"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"/></svg>
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-hand-heart-icon lucide-hand-heart">
+                        <path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
+                        <path
+                            d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" />
+                        <path d="m2 15 6 6" />
+                        <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" />
+                    </svg>
                 </div>
                 <h5>Empathy</h5>
                 <p>People first, always.</p>
             </div>
             <div class="card">
                 <div class="icon-container">
-                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole-icon lucide-lock-keyhole"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-lock-keyhole-icon lucide-lock-keyhole">
+                        <circle cx="12" cy="16" r="1" />
+                        <rect x="3" y="10" width="18" height="12" rx="2" />
+                        <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+                    </svg>
                 </div>
                 <h5>Security</h5>
                 <p>Protecting what matters most.</p>
             </div>
             <div class="card">
                 <div class="icon-container">
-                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake-icon lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+                    <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-handshake-icon lucide-handshake">
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                        <path
+                            d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                        <path d="m21 3 1 11h-2" />
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                        <path d="M3 4h8" />
+                    </svg>
                 </div>
                 <h5>Partnership</h5>
                 <p>We succeed when our clients succeed.</p>
@@ -208,14 +256,14 @@
                 <li><a href="">AI Integration</a></li>
                 <li><a href="">Compliance</a></li>
             </ul>
-            <ul>
+            <ul class="links-list">
                 <li><a href=""><b>Company</b></a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Industries</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">Careers</a></li>
             </ul>
-            <ul>
+            <ul class="links-list">
                 <li><a href=""><b>Legal</b></a></li>
                 <li><a href="">Privacy Policy</a></li>
                 <li><a href="">Terms of Service</a></li>
